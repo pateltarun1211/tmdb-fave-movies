@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Header -->
+{% if current_user.is_authenticated %}
+<br>
+<br>
+{% include "form_searchbox.html" %}
+<br>
+<hr>
+<br>
+{% include "popular.html" %}
+<br>
+<hr>
+<br>
+{% include "upcoming.html" %}
+<br>
+<hr>
+<br>
+{% include "nowplaying.html" %}
+{% else %}
+<br>
+<br>
+<h2> <a href="{{ url_for('auth.signup') }}">Sign Up</a> / <a href="{{ url_for('auth.signin') }}">Sign In</a> To Save Your Favorite Movies</h2>
+
+<br>
+<br>
+{% include "popular.html" %}
+<br>
+<hr>
+<br>
+{% include "upcoming.html" %}
+<br>
+<hr>
+<br>
+{% include "nowplaying.html" %}
+{% endif %}
+
+
+
+<!-- Footer -->
+<footer class="row" id="footer">
+    <div class="col-2 col-md-2">
+        <img src="../../static/images/tmdblogo.svg" alt="TMDB Logo" id="footer-logo">
+    </div>
+
+    <div class="col-2 col-md-2">
+        <div class="footer-text-flex">
+            <a class="footer-link" href="https://github.com/pateltarun1211/tmdb-fave-movies"><h4>Git in my Hub</h4></a>
+            <a class="footer-link" href="{{ url_for('site.about') }}"><p>About Fave Movies</p></a>
+        </div>
+    </div>
+
+</footer>
+</div>
+
+{% endblock content %}

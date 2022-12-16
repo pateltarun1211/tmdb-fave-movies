@@ -1,0 +1,239 @@
+/* Nav Styles */
+body{
+    background-image: url('../images/background.jpg');
+}
+.ct-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vh;
+    color: white;
+}
+
+/* Target Main Logo Image */
+.ct-nav img{
+    width: 100%;
+    max-width: 100%;
+    margin-left: 2vw;
+    margin-top: 1vw;
+    display: block;
+}
+
+ul#horizontal-list{
+    min-width: 696px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+ul#horizontal-list li, ul#horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color: rgb(255, 255, 255);
+}
+
+ul#horizontal-list a:nth-last-child(1){
+    border: 2px solid blue;
+    border-radius: 11px;
+    margin-right: 0.2vw;
+}
+/* End of Nav Styles */
+
+/* Start of Hero/Header Section */
+#header-text{
+    padding: 2vw;
+}
+
+.header-image{
+    width: 75%;
+    max-width: 100%;
+    padding-top: 4vh
+}
+/* End of Hero/Header Section */
+
+
+
+/* Footer Section Styles */
+.footer-text-flex {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+#footer-logo{
+    width: 90%;
+    max-width: 100%;
+    margin-top: 3vw;
+}
+
+#footer{
+
+    margin-top: 20vh;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-link{
+    color: white;
+    text-decoration: none;
+}
+/* Profile Styles */
+.hero-section{
+    height: 95vh;
+    background-image:linear-gradient(to right bottom, rgba(30, 115,172, 0.7), rgba(142, 57, 153, 0.6)), url(../images/Car_Monochromatic.svg);
+    background-size: cover;
+    background-position: 35% 50%;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path:polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+}
+
+.header-text{
+    display:flex;
+    justify-content: center;
+    padding-top: 20%;
+    left: 20rem;
+    top: 10rem;
+    color: white;
+}
+
+/* Search Box */
+.searchbox, .searchbox-title{
+    max-width: 40%;
+    margin: auto;
+    color: white;
+}
+
+.searchbox-title{
+    text-align: center;
+}
+
+/* Movie Cards */
+.row {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.carousel-inner, .card {
+    margin: auto;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+img {
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    
+}
+img {
+    pointer-events: none;
+}
+.movie_card{
+    padding: 0 !important;
+    width: 11rem;
+    margin:14px; 
+    border-radius: 10px;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+    height: 20rem;
+}
+.movie_card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 11rem;
+    height: 16.5;
+}
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+.movie_info{
+    color: #5e5c5c;
+}
+
+.movie_info i{
+    font-size: 20px;
+}
+.card-title{
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 4rem;
+    color: white;
+}
+.play_button{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    right: 5px;
+    top: 15px;
+    font-size: 27px;
+    padding-left: 21px;
+    padding-top: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.card-body i{
+    color: #ffffff;
+}
+.carousel-inner{
+    padding: 1em;
+}
+.carousel-item{
+    transition: 3s;
+}
+.carousel-control-prev, .carousel-control-next{
+    color: white;
+}
+.card{
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+}
+.card-body{
+    height: fit-content;
+    background-color: black;
+}
+.accordion-button{
+    background-color: transparent;
+    color: white;
+}
+.accordion-item {
+    background-color: transparent;
+    color: white;
+}
+h1{
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 0px #FFFFFF
+    ;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#signin-image{
+    filter: invert(100%);
+    max-width: 300px;
+}
+
+#signup-image{
+    filter: invert(100%);
+    max-width: 300px;
+}

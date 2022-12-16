@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if current_user.is_authenticated %}
+<br>
+<br>
+{% include "form_searchbox.html" %}
+{% endif %}
+<br>
+<hr>
+<br>
+<h1>Invalid Search Results</h1>
+
+{% endblock content %}

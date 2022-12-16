@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<br>
+<br>
+<main class="container">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Create Your Free Account</h2>
+            {% include 'form_signup.html' %}
+        </aside>
+        <aside class="col-12 col-md-6">
+            <img id="signup-image" src="../../static/images/signup.svg" alt="">
+        </aside>
+    </div>
+</main>
+{% endblock content %}

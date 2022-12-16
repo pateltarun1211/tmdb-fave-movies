@@ -1,0 +1,1 @@
+gunicorn "movies_inventory:app"

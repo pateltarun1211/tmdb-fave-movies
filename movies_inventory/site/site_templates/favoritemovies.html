@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    .card {
+        flex-direction: row;
+        align-items: center;
+        background-color: black;
+        margin-bottom: 20px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: white;
+    }
+    .card-title {
+        font-weight: bold;
+        color: white;
+        font-size: 30px;
+    }
+    p{
+        color: white;
+    }
+
+    .card img {
+        width: auto;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: calc(0.25rem - 1px);
+        color: white;
+        margin-right: 50px;
+    }
+    .btn{
+        color: white;
+        background-color: transparent;
+    }
+</style>
+<br>
+<br>
+{% include "form_searchbox.html" %}
+<br>
+<br>
+
+{% for movie in movies %}
+<div class="card">
+    <img src="{{ movie.poster }}" class="card-img-top" />
+    <div class="card-body">
+        <h5 class="card-title">- {{ movie.title }} -</h5>
+        <p class="card-text"> - {{ movie.overview }}</p>
+        <form action="/api/movies/delete" method="POST">
+            <input type="hidden" name="tmdb_id" value="{{ movie.tmdb_id }}"/>
+            <button name ="submit" class="btn btn-primary" type="submit">Delete</button>
+        </form>
+    </div>
+</div>
+{% endfor %}
+
+
+
+{% endblock content %}

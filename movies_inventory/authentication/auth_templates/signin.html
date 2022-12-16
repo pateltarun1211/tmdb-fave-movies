@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+{% with messages = get_flashed_messages(with_categories = true) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+            {% if cat == 'user-created' %}
+                <div class="container">
+                    {{ msg }}
+                    <button type="button" class="close" data-dismiss="alert", onclick="this.parentElement.style.display='none'">&times;</button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<br>
+<br>
+<br>
+<br><br>
+<main class="container">
+    <div class="row">
+        <aside class="col-12 col-md-6">
+            <h2>Sign In!</h2>
+            {% include 'form_signin.html' %}
+        </aside>
+        <aside class="col-12 col-md-6">
+            <img id="signin-image" src="../../static/images/signin.svg" alt="">
+        </aside>
+    </div>
+</main>
+{% endblock content %}

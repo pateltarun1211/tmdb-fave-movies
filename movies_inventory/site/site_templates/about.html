@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    .about-p{
+        color: white;
+    }
+    .flex-container {
+        display: flex;
+        color: white;
+
+    }
+    
+    .flex-child {
+        flex: 1;
+        margin-right: 20px;
+    }  
+    
+    .flex-child:first-child {
+        margin-right: 20px;
+    }
+    #myself{
+        max-width: 150px;
+        margin-right: 20px;
+    }
+    p{
+        font-size: 30px;
+        text-align: center;
+    }
+    div {
+        display: flex;
+        justify-content: center;
+      }
+
+</style>
+
+<br>
+<br>
+{% if current_user.is_authenticated %}
+{% include "form_searchbox.html" %}
+{% endif %}
+<br>
+<br>
+<br>
+
+
+<h1>About</h1>
+<br>
+<br>
+<div class="flex-container">
+
+    <div class="flex-child">
+        <p> Creator: Tarun Patel </p>
+        <img id="myself" src="../../static/images/myself.png" alt="Tarun">
+    </div>
+    
+    <div class="flex-child">
+        <h2>This site was created to showcase using Flask to call a 3rd party API from the TMDB REST API. 
+            The Home page shows 10 movies from the popular, upcoming, and now playing endpoints.
+            API is called using arguments passed through to functions. <br>
+            <br>The search API takes in user input to pull the first 5 
+            results from the movie search endpoint. If user is logged in they can choose to favorite the movie and save it to their profile.
+            These will be tracked by different logins. 
+        </h2>
+    </div>
+    
+</div>
+
+
+
+{% endblock content %}
