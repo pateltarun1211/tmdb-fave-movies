@@ -23,7 +23,7 @@ def home():
         return render_template('searchresults.html', results = search)
     return render_template('index.html', popular = popular_movies, upcoming = upcoming_movies, nowplaying = now_playing)
 
-@site.route('/profile')
+@site.route('/profile', methods=['GET', 'POST'])
 @login_required
 def profile():
     getmovies = saved_movies()
@@ -46,7 +46,7 @@ def search():
         results = search_movie(query)
     return render_template('searchresults.html', results = results)
 
-@site.route('/about')
+@site.route('/about', methods=['GET', 'POST'])
 def about():
     if request.method == 'POST':
         query = request.form.get('query')
